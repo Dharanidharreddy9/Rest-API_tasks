@@ -1,0 +1,18 @@
+In this API I have used Postgres as a database with SQLAlchemy ORM in app.py file.
+Marshmallow to create schema and token to authorize user in main.py file.
+
+
+I am entered all the packages whatever used in this API.
+After that I have given a connection between python and database.
+
+
+I have created a table with the name of User, and in this table I am given some attributes like id, name ,email etc...(24L-29L)
+
+
+Application working procedure:(postman)
+
+1)First user will be signed in with their own credentials in the form like name, email and the password. This is signing in to API.
+2)After signin user will login with the email and the password so that user will get the token. ex ("token:ldsvcscbsCHSBCwdciwbcibwdhhwjb")
+3)If the user wants to get the data, then using the token key he will get the JSON data.
+  we are using the symmetric algorithm to decode the token into JSON data.
+  For that data we need to enter x-access-token and the token key in headers, if user hit on send then they will get the JSON Data.

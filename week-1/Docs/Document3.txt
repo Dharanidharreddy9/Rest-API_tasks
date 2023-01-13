@@ -1,0 +1,48 @@
+Implemented DDL, DQL, DML, DCL, TCL, SQL Joins types in a single file.
+
+I am using only one package that psycopg2.
+I have connected the database using psycopg2.
+
+working procedure:
+1)If we are running this code it is showing that select one topic, so that user will be elected one topic.
+2)If the user will select option 1 i.e. DDL topic then user will entered into the while loop and he gets the options like CREATE,DROP,ALTER,TRUNCATE.
+3)So depend on the user requirement he will select one option then user will get the data accordingly.
+4)After completing the each and every topic the connection will be committed so that the data will be updated in the database.
+5)In the same manner all the other topics also worked accordingly.
+6) If the user wants to enter their own query then he will select option 5 so that user can enter the query and he will get the data whatever he wants.
+7)Finally their is option 6, if the user wants to quit from this loop then if he hits on 6 option the connection will be closed.so that user will be exited from the database.
+
+
+simple procedure:
+1.DDL, 2.DML,3.DCL,4.joins, 5.Direct Query from the Database, 6.Exit
+Select anyone Topic: #If user select any one topic then it will be enter into that topic
+                     #If user select 1
+
+1.CREATE, 2.Drop, 3.Alter ,4.Truncate
+select anyone option: #If the user wants to drop table or ALTER data in the TABLE
+                      # If user select 1
+
+Output: "Table created successfully"
+        # The table is created
+
+1.DDL, 2.DML,3.DCL,4.joins, 5.Direct Query from the Database, 6.Exit
+Select anyone Topic: #if the user select 4
+
+1.Inner Join, 2.Left Join, 3.Right Join, 4.Full Join
+ select any one option: #if user wants to get common data then he will go with INNER join.
+
+output:[(1, 'keyboard', 400, 4, 4, 'John', 'Reinharbit', 25, 'UK'),
+        (2, 'Mouse', 300, 4, 4, 'John', 'Reinharbit', 25, 'UK'),
+        (3, 'Monitor', 12000, 3, 3, 'Davis', 'Robinson', 22, 'UK'),
+        (4, 'keyboard', 400, 1, 1, 'John', 'Doe', 31, 'USA'),
+        (5, 'Mousepad', 250, 2, 2, 'Robert', 'Luna', 22, 'USA')]
+
+1.DDL, 2.DML,3.DCL,4.joins, 5.Direct Query from the Database, 6.Exit
+Select anyone Topic: #if the user select 5(here user can give the query directly according to their requirement)
+                     # select * from customers;
+
+output:[(1, 'John', 'Doe', 31, 'USA'),
+        (2, 'Robert', 'Luna', 22, 'USA'),
+        (3, 'Davis', 'Robinson', 22, 'UK'),
+        (4, 'John', 'Reinharbit', 25, 'UK'),
+        (5, 'Betty', 'Doe', 28, 'UAE')]

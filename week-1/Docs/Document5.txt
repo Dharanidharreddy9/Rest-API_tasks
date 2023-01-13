@@ -1,0 +1,11 @@
+fetch data from telemetry_data (table name) Postgres database, and insert it to analytical_data (table name) table.
+
+
+1)First i have created a telemetry data table model – [id(PK), device_name(varchar), application_name(varchar), payload(JSON)]
+2)In the manner i have created the second table also • analytical_data table model – [id(PK), device_name(varchar), payload1(int),payload2(int), payload3(int)]
+
+Working proceedure:
+1)If the user will post the data in the form of json and inside payload(payload1,payload2,payload3) then it will fetch the data from the user and it will store in first table as the payload as json format.
+2)In the 2nd table it will splitted into single single values.
+3)For this i have created one API that is post method it will fetch the data as json format and posted into telemetry data generally wahtever user gven,
+  But in the 2nd table data will be inserted as splitted.

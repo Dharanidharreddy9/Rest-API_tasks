@@ -1,0 +1,35 @@
+In this module I have implemented all the CRUD Operations using psycopg2
+
+First I have connected with the database using psycopg2
+
+Working procedure:
+ 1.Insert, 2.Read, 3.Update, 4.Delete, 5. Exit
+ Enter any one option: # if the user wants to Get the data then he will select 2
+
+Output:   publisher_Id =  1
+          publisher_name =  Packt
+          publisher_estd  =  1950
+          publisher_location  =  chennai
+          publisher_type  =  books
+
+          publisher_Id =  2
+          publisher_name =  Springer
+          publisher_estd  =  1950
+          publisher_location  =  chennai
+          publisher_type  =  books
+
+          etc...
+
+
+1.Insert, 2.Read, 3.Update, 4.Delete, 5. Exit
+Enter any one option: # If the user wants to Update he data then he will select 3
+
+Output: user will give the id wherever he wants to change the data.
+        accordingly it will be changed.
+
+
+1.Insert, 2.Read, 3.Update, 4.Delete, 5. Exit
+Enter any one option: # If the user wants to exit from this loop then he will select 5
+
+Output: "PostgreSQL connection is closed"
+        "you are exited form the database"
